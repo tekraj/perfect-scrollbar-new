@@ -14,8 +14,8 @@
     }
     .container .content {
       background-image: url('./assets/azusa.jpg');
-      width: 1280px;
-      height: 720px;
+      width: 12800px;
+      height: 7200px;
       color: blue;
       font-size: 20px;
     }
@@ -24,24 +24,22 @@
   <body>
     <div class="container">
       <div class="content">
-        wheelSpeed: 0.1
+        default
       </div>
     </div>
     <div class="container">
       <div class="content">
-        wheelSpeed: 10
+        minScrollbarLength: 200px
       </div>
     </div>
 
     <script>
     var containers = document.querySelectorAll('.container');
 
-    new PerfectScrollbar(containers[0], {
-      wheelSpeed: 0.1
-    });
+    new PerfectScrollbar(containers[0]);
 
     new PerfectScrollbar(containers[1], {
-      wheelSpeed: 10
+      minScrollbarLength: 200
     });
     </script>
   </body>
