@@ -1,6 +1,6 @@
 /*!
  * perfect-scrollbar v1.4.0
- * (c) 2018 Hyunje Jun
+ * (c) 2020 Hyunje Jun
  * @license MIT
  */
 function get(element) {
@@ -1037,7 +1037,7 @@ var touch = function(i) {
         startTime = currentTime;
       }
 
-      if (shouldPrevent(differenceX, differenceY)) {
+      if (e.cancelable && shouldPrevent(differenceX, differenceY)) {
         e.preventDefault();
       }
     }
